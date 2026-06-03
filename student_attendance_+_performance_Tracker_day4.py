@@ -1,0 +1,11 @@
+import numpy as np
+marks      = np.array([60, 75, 80, 45, 90, 65, 31, 52])
+attendance = np.array([80, 90, 70, 60, 95, 64, 74, 80])
+eligible = (marks >= 50) & (attendance >= 90)
+print("eligible student", eligible)
+print("number of eligible student: ", np.sum(eligible))
+print("number of non eligible student: ", np.sum(~eligible))
+print("non eligible student mark: ", marks[~eligible])
+print("eligible student mark: ", marks[eligible])
+print("non eligible student attendance ", attendance[~eligible])
+print("eligible student attendance: ", attendance[eligible])

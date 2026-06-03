@@ -1,0 +1,10 @@
+import numpy as np
+age = np.array([18, 25, 40, 60, 70])
+bp  = np.array([110, 120, 140, 160, 170])
+risk = (age > 50) & (bp > 140)
+print("risk flag: ", risk)
+print("number of risk flag: ", np.sum(risk))
+print("high risk ages:", age[risk])
+print("safe ages: ", age[~risk])
+print("high risk bp: ", bp[risk])
+print("safe bp: ", bp[~risk])
